@@ -9,4 +9,5 @@ import com.example.hbnt.entity.Autor;
 
 public interface AutorRepo extends JpaRepository<Autor, Serializable>{
 	public abstract List<Autor> findAll();
+	public abstract Autor findById(int id);
 }

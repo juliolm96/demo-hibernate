@@ -1,7 +1,5 @@
 package com.example.hbnt.entity;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -13,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="LIBROS")
-public class Libro implements Serializable {
+public class Libro {
 
 	@Id 
 	@Column(name="id")

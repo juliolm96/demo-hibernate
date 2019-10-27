@@ -16,11 +16,15 @@ public class AutorM {
 		
 	}
 
-	public AutorM(Autor autor) {
+	public AutorM(Autor autor, boolean libros) {
 		this.id = autor.getId();
 		this.nombre = autor.getNombre();
 		this.nacionalidad = autor.getNacionalidad();
-		this.libros = autor.getLibros().stream().map(libro -> new LibroM(libro)).collect(Collectors.toList());
+		if (libros) {
+			this.libros = autor.getLibros().stream().map(libro -> new LibroM(libro)).collect(Collectors.toList());
+		} else {
+			this.libros = new ArrayList<>();
+		}
 	}
 	
 	public AutorM(int id, String nombre, String nacionalidad, List<LibroM> libros) { 
